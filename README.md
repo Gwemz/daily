@@ -5,8 +5,12 @@ More than one year ago, a repository was built on github to record daily technol
 
 That branch is a bit too big, first create a separate repository, split a separate part, for daily life learning records~
 
-### :pig_nose: [代码](./code)
+### :pig: :pig: :pig: [代码](./code)
 
-### :pig_nose: [杂录](./life)
+daily practice about code
+
+### :pig: :pig: :pig: [杂录](./life)
+
+daily records about life
 
 ![img](./imgs/daily_01.jpg)
