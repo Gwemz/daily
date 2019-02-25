@@ -21,3 +21,7 @@
 小程序中图表拖拽过后，(使用wxcharts插件)整个页面无法滚动，也不能触发onPageScroll事件
 
 解决方式：将canvas组件的disable-scroll属性删掉,而非设置为true
+
+### 2019.2.25
+
+vconsole : 腾讯开源的移动端H5控制台调试工具，支持查看console日志、网络请求、自定义插件等.
