@@ -56,6 +56,6 @@ https://github.com/nondanee/vsc-netease-music
 
 在写博客文章时最好截图，录制一个动图，这样效果更为直观。我们写博客的目的不是只为了让我们自己看，更多的是让别人看。
 
-### 微信每日说，每日自动给别人发送微信消息
+### 2019.03.06 微信每日说，每日自动给别人发送微信消息
 
 挺有趣的项目 -》 https://github.com/gengchen528/wechatBot
