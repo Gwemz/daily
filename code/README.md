@@ -59,3 +59,9 @@ https://github.com/nondanee/vsc-netease-music
 ### 2019.03.06 微信每日说，每日自动给别人发送微信消息
 
 挺有趣的项目 -》 https://github.com/gengchen528/wechatBot
+
+### 2019.03.18 [parcel：极速零配置web打包工具](https://parceljs.org/)
+
+安装parcel： `yarn global add parcel-bundler`
+
+创建一个 package.json 文件，`yarn init -y`
