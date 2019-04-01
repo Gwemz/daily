@@ -7,10 +7,10 @@ That branch is a bit too big, first create a separate repository, split a separa
 
 ### :pig: :pig: :pig: [代码](./code)
 
-daily practice about code
+[daily practice about code](./code)
 
 ### :pig: :pig: :pig: [杂录](./life)
 
-daily records about life
+[daily records about life](./life)
 
 ![img](./imgs/daily_01.jpg)
