@@ -1,4 +1,5 @@
-## 每日一练 
+## 每日一练 ![gwemz-daily](https://img.shields.io/badge/gwemz-daily-critical.svg)
+
 a program about daily life!
 
 More than one year ago, a repository was built on github to record daily technology and life. The gh-pages branch has been submitted more than 440 times so far.
