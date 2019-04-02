@@ -1,14 +1,16 @@
 ## 目录
 
+* [2019.04.02](#20190402-github-readme文档生成徽章)
+
 * [2019.04.01](#20190401-github热门项目搜索)
 
-* [2019.03.28](#20190328-关于996.icu)
+* [2019.03.28](#20190328-关于996icu)
 
 * [2019.03.26](#20190326-关于定时发送短信)
 
 * [2019.03.18](#20190318-parcel：极速零配置web打包工具)
 
-* [2019.03.06](#20190306-微信每日说，每日自动给别人发送微信消息)
+* [2019.03.06](#20190306-微信每日说每日自动给别人发送微信消息)
 
 * [2019.03.05](#20190305-VSCode-网易云音乐扩展/博文书写时需注意)
 
@@ -20,25 +22,27 @@
 
 * [2019.02.21](#20190221-node-qrcode)
 
-* [2019.02.20](#20190220已按要求完成修改，微信也解禁了搜索小程序的功能)
+* [2019.02.20](#20190220已按要求完成修改微信也解禁了搜索小程序的功能)
 
 * [2019.02.18](#20190218小程序IOS端无法进行虚拟商品价格展示及支付问题)
 
-### [2019.04.01 github热门项目搜索](https://github.com/Gwemz/daily/issues/2)
+### [2019.04.02 github readme文档生成徽章](https://github.com/Gwemz/daily/issues/9#issuecomment-478813031)
 
-### [2019.03.28 关于996.icu](https://github.com/Gwemz/daily/issues/3)
+### [2019.04.01 github热门项目搜索](https://github.com/Gwemz/daily/issues/9#issuecomment-478811121)
 
-### [2019.03.26 关于定时发送短信](https://github.com/Gwemz/daily/issues/4)
+### [2019.03.28 关于996.icu](https://github.com/Gwemz/daily/issues/8#issuecomment-478810663)
 
-### [2019.03.18 parcel：极速零配置web打包工具](https://github.com/Gwemz/daily/issues/5)
+### [2019.03.26 关于定时发送短信](https://github.com/Gwemz/daily/issues/8#issuecomment-478810423)
+
+### [2019.03.18 parcel：极速零配置web打包工具](https://github.com/Gwemz/daily/issues/8#issuecomment-478810129)
 
 ### [2019.03.06 微信每日说，每日自动给别人发送微信消息](https://github.com/gengchen528/wechatBot)
 
-### [2019.03.05 VSCode 网易云音乐扩展/博文书写时需注意](https://github.com/Gwemz/daily/issues/6)
+### [2019.03.05 VSCode 网易云音乐扩展/博文书写时需注意](https://github.com/Gwemz/daily/issues/8#issuecomment-478809432)
 
 ### [2019.03.04 字蛛-文字体压缩器](http://font-spider.org/)
 
-### [2019.02.25 vconsole](https://github.com/Gwemz/daily/issues/7)
+### [2019.02.25 vconsole](https://github.com/Gwemz/daily/issues/7#issue-427534281)
 
 ### [2019.02.22 关于使用wxcharts插件使得页面无法正常滚动]()
 
