@@ -1,6 +1,6 @@
 ## 目录
 
-### [2019.04.04 易经64卦绘制](./taiji/index)
+### [2019.04.04 易经64卦绘制](./taiji/index.html)
 
 ### [2019.04.03 一些面试题整理](https://github.com/Gwemz/daily/issues/9#issuecomment-479323330)
 

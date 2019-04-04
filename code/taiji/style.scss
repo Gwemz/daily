@@ -7,15 +7,23 @@ body{
     align-items: center;
     justify-content: center;
 }
+@mixin  posCenter {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+}
 .container{
     width:1200px;
-    // height: 700px;
     margin:0 auto;
     @include center();
     flex-direction: column;
     #taiji{
-        width:250px;
-        height: 250px;
+        // width:250px;
+        // height: 250px;
+        width:600px;
+        height: 600px;
         background: linear-gradient(to bottom,black 0%,black 50%,white 50%,white 0%);
         border-radius: 50%;
         box-shadow: 6px 6px 27px 4px rgba(0, 0, 0, .16);
@@ -23,6 +31,8 @@ body{
         flex-direction: row;
         align-items: center;
         animation: rotate 3s linear infinite;
+        @include posCenter();
+        margin:auto;
         .yin,.yang{
             width: 50%;
             height: 50%;
@@ -49,21 +59,32 @@ body{
         color: white;
         font-weight: bold;
     }
-    .gua-list{
-        width: 100%;
+    .gua-list,.tables{
+        width: 1200px;
         padding:0;
         list-style: none;
         color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @include posCenter();
+        margin:auto;
+        background: rgba(70, 142, 141,.3);
+        z-index: 2;
         .gua-item{
-            width: 100%;
+            width: 200px;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
-            margin-bottom: 35px;
+            padding:30px 0;
+            cursor: pointer;
+            &:hover{
+                background: rgba(51, 119, 118,.6);
+            }
             .gua-name{
                 font-weight: bold;
                 font-size: 40px;
-                margin:0 30px;
+                margin:20px auto 0;
             }
             .xiang{
                 width: 50px;
@@ -94,6 +115,18 @@ body{
                 &>div:nth-of-type(6n){
                     margin-bottom: 0px;
                 }
+            }
+        }
+    }
+    .tables{
+        width: 800px;
+        .table_item{
+            width: 100px;
+            height: 100px;
+            @include center();
+            cursor: pointer;
+            &:hover{
+                background: #337776;
             }
         }
     }
