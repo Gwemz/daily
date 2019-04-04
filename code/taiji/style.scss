@@ -1,0 +1,106 @@
+body{
+    background: #468e8d;
+    font-family: "微软雅黑";
+}
+@mixin  center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width:1200px;
+    // height: 700px;
+    margin:0 auto;
+    @include center();
+    flex-direction: column;
+    #taiji{
+        width:250px;
+        height: 250px;
+        background: linear-gradient(to bottom,black 0%,black 50%,white 50%,white 0%);
+        border-radius: 50%;
+        box-shadow: 6px 6px 27px 4px rgba(0, 0, 0, .16);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        animation: rotate 3s linear infinite;
+        .yin,.yang{
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            background: black;
+            @include center();
+            &::before{
+                content: '';
+                width: 25%;
+                height: 25%;
+                border-radius: 50%;
+                background: white;
+            }
+            &.yang::before{
+                background: black;
+            }
+        }
+        .yang{
+            background: white;
+        }
+    }
+    .name{
+        margin-top:20px;
+        color: white;
+        font-weight: bold;
+    }
+    .gua-list{
+        width: 100%;
+        padding:0;
+        list-style: none;
+        color: #ffffff;
+        .gua-item{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 35px;
+            .gua-name{
+                font-weight: bold;
+                font-size: 40px;
+                margin:0 30px;
+            }
+            .xiang{
+                width: 50px;
+                display: flex;
+                flex-direction: column;
+                .long{
+                    width: 100%;
+                    height: 5px;
+                    background: #ffffff;
+                    margin-bottom: 5px;
+                }
+                .short{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-bottom: 5px;
+                    &::before,&::after{
+                        content: "";
+                        width: 45%;
+                        height: 5px;
+                        background: #ffffff;
+                    }
+                }
+                &>div:nth-of-type(3n){
+                    margin-bottom: 10px;
+                }
+                &>div:nth-of-type(6n){
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotate{
+    to{
+        transform: rotate(-360deg);
+    }
+}

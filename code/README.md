@@ -1,6 +1,8 @@
 ## 目录
 
-### [2019.04.03 一些面试题整理]
+### [2019.04.04 易经64卦绘制](./taiji/index)
+
+### [2019.04.03 一些面试题整理](https://github.com/Gwemz/daily/issues/9#issuecomment-479323330)
 
 ### [2019.04.02 github readme文档生成徽章](https://github.com/Gwemz/daily/issues/9#issuecomment-478813031)
 

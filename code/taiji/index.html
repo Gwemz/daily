@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绘制一个八卦图</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <!-- 旋转太极图 -->
+            <!-- <div id="taiji">
+                <div class="yin"></div>
+                <div class="yang"></div>
+            </div>
+            <div class="name">太极</div> -->
+            <ul class="gua-list">
+                <li class="gua-item" v-for="(item,index) of gualist" :key="index">
+                    <div class="xiang">
+                        <div :class="xiang == 1?'long':'short'" v-for="(xiang,index1) of item.xiang.split('')" :key="index1" :title="item.yao_detail[index1]">
+                        </div>
+                    </div>
+                    <div class="gua-name">{{index+1}}、{{item.name}}</div>
+                    <div class="gua-desc">
+                        {{item.gua_detail}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
