@@ -73,52 +73,76 @@ body{
         background: rgba(70, 142, 141,.3);
         // overflow-y: scroll;
         z-index: 2;
+        &.gua-list{
+            width: 800px;
+            // height: 800px;
+            border-radius: 50%;
+            // overflow:hidden;
+            position: relative;
+        }
         .gua-item{
             // width: 200px;
             width: 133px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding:25px 0;
+            // padding:25px 0;
+            padding:15px 0;
             cursor: pointer;
+            position: absolute;
+            left:0;
+            right:0;
+            margin:0px auto 0;
+            transform-origin: 50% 400px;
+            animation: rotateTurn linear 10s infinite;
             &:hover{
                 background: rgba(51, 119, 118,.6);
             }
             .gua-name{
                 font-weight: bold;
-                font-size: 40px;
+                // font-size: 40px;
+                font-size: 16px;
                 margin:20px auto 0;
+                // animation: circleRotate 3s linear infinite;
             }
             .xiang{
-                width: 50px;
+                // width: 50px;
+                width: 30px;
                 display: flex;
                 flex-direction: column;
+                // animation: circleRotate 1s linear infinite;
                 .long{
                     width: 100%;
-                    height: 5px;
+                    // height: 5px;
+                    height: 2px;
                     background: #ffffff;
-                    margin-bottom: 5px;
+                    // margin-bottom: 5px;
+                    margin-bottom: 3px;
                 }
                 .short{
                     width: 100%;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
-                    margin-bottom: 5px;
+                    // margin-bottom: 5px;
+                    margin-bottom: 3px;
                     &::before,&::after{
                         content: "";
                         width: 45%;
-                        height: 5px;
+                        // height: 5px;
+                        height: 2px;
                         background: #ffffff;
                     }
                 }
                 &>div:nth-of-type(3n){
-                    margin-bottom: 10px;
+                    // margin-bottom: 10px;
+                    margin-bottom: 6px;
                 }
                 &>div:nth-of-type(6n){
                     margin-bottom: 0px;
                 }
             }
+            
         }
     }
     .tables{
@@ -133,10 +157,42 @@ body{
             }
         }
     }
+    .circle{
+        width: 300px;
+        height: 300px;
+        margin:200px auto 0;
+        background: yellowgreen;
+        border-radius: 50%;
+        .ball{
+            width: 100px;
+            height: 50px;
+            background: brown;
+            margin: 20px auto 0;
+            transform-origin: 50% 130px;
+            animation: rotateTurn linear 5s infinite;
+            color: #ffffff;
+            @include center();
+        }
+    }
 }
 
 @keyframes rotate{
     to{
         transform: rotate(-360deg);
+    }
+}
+
+@keyframes circleRotate{
+    from{
+        transform: rotate(0,0,1,0deg);
+    }
+    to{
+        transform: rotate3d(0,0,1,360deg);
+    }
+}
+
+@keyframes rotateTurn{
+    100%{
+        transform: rotate(1turn);
     }
 }
