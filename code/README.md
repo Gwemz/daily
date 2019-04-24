@@ -1,6 +1,6 @@
 ## 目录
 
-### [2019.04.24 小程序审核未通过](https://github.com/Gwemz/daily/issues/9#issuecomment-486246501)
+### [2019.04.24 诱导分享至朋友圈-小程序审核未通过](https://github.com/Gwemz/daily/issues/9#issuecomment-486246501)
 
 ### [2019.04.22 ES6、ES7、ES8、ES9、ES10新特性一览](https://github.com/Gwemz/daily/issues/9#issuecomment-485335478)
 
