@@ -1,5 +1,15 @@
 ## 目录
 
+### [2019.04.24 小程序审核未通过](https://github.com/Gwemz/daily/issues/9#issuecomment-486246501)
+
+### [2019.04.22 ES6、ES7、ES8、ES9、ES10新特性一览](https://github.com/Gwemz/daily/issues/9#issuecomment-485335478)
+
+### [2019.04.15 小程序左右联动效果实现](https://github.com/Gwemz/daily/issues/9#issuecomment-483182792)
+
+### [2019.04.11 vscode插件【超越鼓励师】](https://github.com/Gwemz/daily/issues/9#issuecomment-482038346)
+
+### [2019.04.08 知乎griffith视频播放器](https://github.com/Gwemz/daily/issues/9#issuecomment-480672677)
+
 ### [2019.04.04 易经64卦绘制](./taiji/index.html)
 
 ### [2019.04.03 一些面试题整理](https://github.com/Gwemz/daily/issues/9#issuecomment-479323330)
