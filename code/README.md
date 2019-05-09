@@ -1,5 +1,11 @@
 ## 目录
 
+### [2019.05.09 汉字与拼音互转工具](https://github.com/Gwemz/daily/issues/10#issuecomment-490713536)
+
+### [2019.05.06 淘宝ip查询接口](https://github.com/Gwemz/daily/issues/10#issuecomment-489492182)
+
+### [2019.04.26 诱导朋友圈问题审核](https://github.com/Gwemz/daily/issues/9#issuecomment-489382371)
+
 ### [2019.04.24 诱导分享至朋友圈-小程序审核未通过](https://github.com/Gwemz/daily/issues/9#issuecomment-486246501)
 
 ### [2019.04.22 ES6、ES7、ES8、ES9、ES10新特性一览](https://github.com/Gwemz/daily/issues/9#issuecomment-485335478)

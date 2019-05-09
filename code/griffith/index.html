@@ -7,26 +7,30 @@
     <title>griffith</title>
 </head>
 <style>
+    h1{
+        text-align: center;
+    }
 #player{
     width: 800px;
     height: 500px;
-    margin:50px auto;
+    margin:10px auto;
 }
 </style>
 <body>
+    <h1>绿皮书：奥斯卡最佳影片</h1>
     <div id="player"></div>
     <script src="https://unpkg.com/griffith-standalone/dist/index.umd.min.js"></script>
     <script>
         const sources = {
             hd: {
-                play_url: 'https://zhstatic.zhihu.com/cfe/griffith/zhihu2018_hd.mp4',
+                play_url: 'http://imgs.wdcorner.cn/Sh8EOoCuW8aWlIxcbWsSd.mp4',
             },
             sd: {
-                play_url: 'https://zhstatic.zhihu.com/cfe/griffith/zhihu2018_sd.mp4',
+                play_url: 'http://imgs.wdcorner.cn/Sh8EOoCuW8aWlIxcbWsSd.mp4',
             }
         }
         const title = '视频播放器griffith'
-        const cover = 'http://img.wdcorner.cn/p2960.jpg';
+        const cover = 'http://imgs.wdcorner.cn/hUbnGmNw6Ro9z8Hr1gpnb.png';
         const locale = 'zh-Hans';
         const player = document.getElementById('player');
         Griffith.createPlayer(player).render({title,sources,cover,locale})
