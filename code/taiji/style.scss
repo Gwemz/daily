@@ -1,6 +1,7 @@
-body{
+// @import "../assets/reset.css";
+body,html{
     background: #468e8d;
-    font-family: "微软雅黑";
+    // font-family: "微软雅黑";
 }
 @mixin  center {
     display: flex;
@@ -55,6 +56,8 @@ body{
         }
     }
     .name{
+        font-size: 24px;
+        margin:20px auto;
         margin-top:20px;
         color: white;
         font-weight: bold;
@@ -74,8 +77,8 @@ body{
         // overflow-y: scroll;
         z-index: 2;
         &.gua-list{
-            width: 800px;
-            // height: 800px;
+            // width: 800px;
+            height: 800px;
             border-radius: 50%;
             // overflow:hidden;
             position: relative;
@@ -89,12 +92,12 @@ body{
             // padding:25px 0;
             padding:15px 0;
             cursor: pointer;
-            position: absolute;
-            left:0;
-            right:0;
-            margin:0px auto 0;
-            transform-origin: 50% 400px;
-            animation: rotateTurn linear 10s infinite;
+            // position: absolute;
+            // left:0;
+            // right:0;
+            // margin:0px auto 0;
+            // transform-origin: 50% 400px;
+            // animation: rotateTurn linear 10s infinite;
             &:hover{
                 background: rgba(51, 119, 118,.6);
             }
