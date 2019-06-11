@@ -3,7 +3,9 @@ var vm = new Vue({
     data:{
         datalist: [],
         erDataList: [],
-        currpage:1
+        currpage:1,
+        selIdx: '0',
+        provinces: ['山西省','北京市','上海市','浙江省']
     },
     created:function(){
         // 初始获取数据
@@ -15,8 +17,10 @@ var vm = new Vue({
             this.processData(this.currpage);
         },
         fetchData:function(){
-            let temp = this;
-            axios.get('./sx2019.json', {
+            let temp = this,
+                idx = temp.selIdx,
+                dataArr = ['sx','bj','sh','zj'];
+            axios.get('./data/2019/'+ dataArr[idx] +'.json', {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
@@ -38,6 +42,15 @@ var vm = new Vue({
             this.datalist = this.datalist.concat(data);
             this.currpage = page+1
             console.log(this.datalist,this.currpage)
+        },
+        // 切换选项
+        selectItem:function(idx,name){
+            this.selIdx = idx;
+            this.currpage = 1;
+            this.datalist = [];
+            this.erDataList = [];
+            this.fetchData()
+            console.log(idx,name);
         }
     }
 })
