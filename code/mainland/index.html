@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>山西省2019工商注册信息</title>
+</head>
+<style>
+body{
+    background: rgba(0, 0, 0, .8);
+    color: #ffffff;
+}
+#root{
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0 auto;
+}
+.item{
+    width: 100%;
+    margin: 30px 0;
+}
+.item >div{
+    line-height: 30px;
+}
+.loadmore{
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+}
+</style>
+<body>
+    <div id="root">
+        <div class="item" v-for="(item,index) of datalist" :name="item.name">
+            <div>公司名称：{{item.name}}</div>
+            <div>省份：{{item.province}}</div>
+            <div>注册日期：{{item.registrationDay}}</div>
+            <div>法人代表：{{item.legalRepresentative}}</div>
+            <div>企业编码：{{item.code}}</div>
+            <div>所在城市：{{item.city}}</div>
+            <div>公司类别：{{item.character}}</div>
+            <div>注册资金：{{item.capital}}</div>
+            <div>服务项目：{{item.businessScope}}</div>
+            <div>公司地址：{{item.address}}</div>
+        </div>
+        <div class="loadmore" v-on:click="loadmore">点此加载更多...</div>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="./index.js"></script>
+</html>
