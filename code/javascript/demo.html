@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+</head>
+<body>
+    <h1>demo about javascript</h1>
+</body>
+<script src="./class.js"></script>
+<script>
+    // JavaScript的简洁之道：https://juejin.im/post/5cfe34f4f265da1b5d57a09b
+    // 1.强类型检查
+    // console.log('0 == false:'+ (0 == false));
+    // console.log('0 === false:'+(0 === false));
+    // 2 == '2'
+    // console.log(2 == '2');
+    // console.log(2 === '2');
+    // const value = '500';
+    // if(value === 500){
+    //     console.log(value);
+    // }
+    // 2.变量
+    // const MAX_AGE = 30;
+    // let daySinceLastVisit = 10;
+    // let currentYear = new Date().getFullYear();
+    // let user = {
+    //     age: 25
+    // }
+    // const isUserOlderThanAllowed = user.age > MAX_AGE;
+    // console.log(currentYear,isUserOlderThanAllowed);
+    // 3.函数 避免使用大量参数。 理想情况下，函数应该指定两个或更少的参数。
+    // function getUsers({fields,fromDate,toDate}){
+    //     let obj = {fields,fromDate,toDate};
+    //     console.log(obj.fields);
+    //     console.log(obj.fromDate);
+    //     console.log(obj.toDate);
+    // }
+    // getUsers({
+    //     fields: ['name','age','email'],
+    //     fromDate: '2019-7-18',
+    //     toDate: '2019-7-30'
+    // })
+    // 使用默认参数替代 || 操作
+    // function createSharp(type = 'cube'){
+    //     let val = type;
+    //     console.log(val);
+    // }
+    // createSharp('daguo');
+    // createSharp();
+    // 一个函数只应该做一件事，不要在一个函数中执行多个操作
+    // bad way
+    // function notifyUsers(users){
+    //     users.forEach(user => {
+    //         const userRecord = database.lookup(user);
+    //         if (userRecord.isVerified()) {
+    //             notify(user);
+    //         }
+    //     })
+    // }
+    // good way
+    // function notifyVerifiedUsers(users){
+    //     users.filter(isUserVerified).forEach(notify)
+    // }
+    // function isUserVerified(user){
+    //     const userRecord = database.lookup(user);
+    //     return userRecord.isVerified();
+    // }
+    // filter方法 filter()方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。
+    // const ages = [32, 33, 16, 40];
+    // function checkAdult(age){
+    //     return age > 25;
+    // }
+    // console.log(ages.filter(checkAdult));
+    // 使用Object.assign设置对象默认值
+    // bad way
+    // const shapeConfig = {
+    //     type: 'circle',
+    //     width: 200,
+    //     height: null
+    // }
+    // function createSharp(config){
+    //     config.type = config.type || 'cube';
+    //     config.width = config.width || 250;
+    //     config.height = config.height || 250;
+    //     return config;
+    // }
+    // console.log(createSharp(shapeConfig));
+    // good way
+    // const shapeConfig = {
+    //     type: 'circle',
+    //     height: 300
+    // }
+    // function createSharp(config){
+    //     config = Object.assign({type:'cube',width:250,height:250},config);
+    //     console.log(config);
+    // }
+    // createSharp(shapeConfig);
+    // Object.assign() 方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象
+    // const object1 = {
+    //     a: 1,
+    //     b: 2,
+    //     c: 3
+    // }
+    // const object2 = Object.assign({c:4,d:5},object1);
+    // console.log(object2);
+    // 不要使用标志作为参数，因为它们告诉函数做的比它应该做的多。(没看明白函数意思)
+    // 不要污染全局变量。 如果需要扩展现有对象，请使用ES类和继承，而不是在原生对象的原型链上创建函数。
+    // bad way
+    // let Array = ['daguo','winter','wang'];
+    // console.log(Array);
+    // Array.__proto__.myFunc = function myFunc(){
+    //     console.log('I am iron man!');
+    // }
+    // console.log(Array);
+    // class SuperArray extends Array{
+    //     myFunc() {
+    //         console.log('I am strong man!');
+    //     }
+    // }
+    // console.log(Array);
+    // 4.条件
+    // 避免使用反面条件
+    // console.log(!undefined);
+    // console.log(!null);
+    // 5. 类
+
+</script>
+</html>
