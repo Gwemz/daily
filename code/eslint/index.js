@@ -3,6 +3,7 @@
 // if(age > 25){
 //     console.log(name);
 // }
+// 对象的扩展
 // const foo = 'bar';
 // const baa = {foo};
 // const baz = {foo: foo};
@@ -143,4 +144,22 @@
 // // const bar = 'abc';
 // const baz = {[foo]:'abc'};
 // console.log(baz);
+
+// const keyA = {a:1};
+// const keyB = {b:2};
+// const myObject = {
+//     [keyA]: 'valueA',
+//     [keyB]: 'valueB'
+// }
+
+// console.log(myObject);
+
+// 方法的name属性
+// const person = {
+//     fucName(){
+//         console.log('hello');
+//     }
+// }
+
+// console.log(person.fucName.name);
 
