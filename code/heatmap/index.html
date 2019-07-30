@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>heatmap</title>
+</head>
+<style>
+*{
+    margin:0;
+    padding:0;
+}
+</style>
+<body>
+    <div style="height: 900px; width: 100%;" id="heatmap"></div>
+    <script src="https://cdn.bootcss.com/heatmap.js/2.0.2/heatmap.min.js"></script>
+    <script>
+        var heatmapInstance = h337.create({
+            container: document.querySelector('#heatmap'),
+        });
+        //构建一些随机数据点,网页切图价格这里替换成你的业务数据
+        var points = [];
+        var max = 0;
+        var width = document.body.clientWidth;
+        var height = document.body.clientHeight;
+        var len = 200;
+        while (len--) {
+            var val = Math.floor(Math.random()*100);
+            max = Math.max(max, val);
+            var point = {
+                x: Math.floor(Math.random()*width),
+                y: Math.floor(Math.random()*height),
+                value: val
+            };
+            points.push(point);
+        }
+        console.log(points);
+        var data = {
+            max: max,
+            data: points
+        };
+        //因为data是一组数据,web切图报价所以直接setData
+        heatmapInstance.setData(data); //数据绑定还可以使用
+
+    </script>
+</body>
+</html>
