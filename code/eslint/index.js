@@ -163,3 +163,52 @@
 
 // console.log(person.fucName.name);
 
+// const person = {
+//     name: 'daguo',
+//     sex: 'man',
+//     age: '25',
+//     location: 'hangzhou',
+//     call(){
+//         return 'phone number is 1515151554';
+//     }
+// }
+// 1.for...in循环遍历对象自身的和继承的可枚举属性（不含 Symbol 属性）。
+// for(let k in person){
+//     if(typeof(person[k]) == 'function'){
+//         console.log(person[k]());
+//     }else{
+//         console.log(k +' is '+ person[k]);
+//     }
+// }
+
+// 2.Object.keys返回一个数组，包括对象自身的（不含继承的）所有可枚举属性（不含 Symbol 属性）的键名。
+// let personKeys = Object.keys(person);
+// console.log(personKeys);
+
+// 3.Object.getOwnPropertyNames返回一个数组，包含对象自身的所有属性（不含 Symbol 属性，但是包括不可枚举属性）的键名。
+// console.log(Object.getOwnPropertyNames(person));
+
+// 4.Object.getOwnPropertySymbols返回一个数组，包含对象自身的所有 Symbol 属性的键名。
+// console.log(Object.getOwnPropertySymbols(person));
+
+// 5.Reflect.ownKeys返回一个数组，包含对象自身的所有键名，不管键名是 Symbol 或字符串，也不管是否可枚举。
+// console.log(Reflect.ownKeys(person));
+
+// super关键字
+// const proto = {
+//     foo: 'hello'
+// }
+
+// const obj = {
+//     foo: 'world',
+//     find(){
+//         return super.foo;
+//     }
+// }
+// Object.setPrototypeOf(obj,proto)
+// console.log(obj.find())
+
+// const obj = {
+//     foo: super.foo
+// }
+
