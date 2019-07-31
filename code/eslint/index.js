@@ -212,3 +212,53 @@
 //     foo: super.foo
 // }
 
+// 1.数组去重
+// const j = [...new Set([1,2,2,3,3,'a','d','e','f','a'])];
+// console.log(j);
+
+// 2.数组清洗(洗掉数组中一些无用的值，如0, undefined, null, false等)
+// const myArray = [0,undefined,null,false,0,1,2,3,4,'a','b','c','d','fejig'];
+// console.log(myArray.filter(Boolean))
+// myArray.map(item => {
+//     console.log(item);
+// }).filter(Boolean)
+
+// 3.创建空对象(我们可以使用对象字面量{}来创建空对象，但这样创建的对象有隐式原型__proto__和一些对象方法比如常见的hasOwnProperty，下面这个方法可以创建一个纯对象。)
+
+// let obj = {};
+// console.log(obj);
+
+// let newObj = Object.create(null);
+// console.log(newObj);
+
+// 4.合并对象(JS中我们经常会有合并对象的需求，比如常见的给用传入配置覆盖默认配置，通过ES6扩展运算符就能快速实现。)
+// const person = {name:'daguo',gender:'male'};
+// const tools = {computer:'mac',editor:'vscode'};
+// const basicInfo = {address:'hangzhou',age:25};
+// const summary = {...person,...tools,...basicInfo};
+// console.log(summary);
+
+// 5.设置函数必传参数
+// const isRequired = () => {throw new Error('param is required');};
+// const hello = (name = isRequired()) => { console.log(`hello ${name}`) }
+// hello()
+// hello(undefined)
+// hello(null)
+// hello('winter');
+
+// 6.解构别名(ES6中我们经常会使用对象结构获取其中的属性，但有时候会想重命名属性名，以避免和作用域中存在的变量名冲突，这时候可以为解构属性名添加别名。)
+// const obj = {x:1};
+// const { x } = obj;
+// const { x:otherName } = obj;
+// console.log({ x:otherName });
+
+// 7.获取查询字符串参数(以前获取URL中的字符串参数我们需要通过函数写正则匹配，现在通过URLSearchParamsAPI即可实现。)
+// console.log(window.location.search);    // ?id=23&name=daguo&age=25&name=winter
+// var urlParams = new URLSearchParams(window.location.search);
+// console.log(urlParams);
+// console.log(urlParams.has('id'));   //true
+// console.log(urlParams.get('name'));     //daguo
+// console.log(urlParams.getAll('name'));      //["daguo","winter"]
+// console.log(urlParams.toString());
+// console.log(urlParams.append('address','1'));   //undefined
+
