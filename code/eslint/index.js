@@ -262,3 +262,32 @@
 // console.log(urlParams.toString());
 // console.log(urlParams.append('address','1'));   //undefined
 
+// var arr = [{'url':''},{'url':''},{'url':''}],
+//     newArr = [];
+// for(let i in arr){
+//     if(arr[i].url != ''){
+//         newArr.push(arr[i].url)
+//     }
+// }
+// if(newArr.length == 0){
+//     newArr.push({'url':'default.jpg'});
+// }
+// console.log(newArr);
+
+let 
+    // arr = [{url:'01.jpg'},{url:'02.jpg'},{url:'03.jpg'}],
+    // urlSrc = [{urlSrc:'index1.html'},{urlSrc:'index2.html'},{urlSrc:'index3.html'}],
+    arr = ["01.jpg","02.jpg","03.jpg",""],
+    urlSrc = ["index1.html","index2.html","index3.html",""],
+    newArr = [];
+for(let i in arr){
+    if(arr[i] != ''){
+        newArr.push({
+            // url: arr[i].url,
+            // link: urlSrc[i].urlSrc,
+            url: arr[i],
+            link: urlSrc[i]
+        })
+    }
+}
+console.log(newArr);

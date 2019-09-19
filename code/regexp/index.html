@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则表达式</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var a = '<p>wang<br/></p><p><img src="456" _src="456" /></p><p>daguo</p><p><img src="789" _src="789" /></p><p>tiechui</p><p><br/></p>';
+    // a.replace(/<img [^>]*src=['"]([^'"]+)[^>]*>/gi, function (match, capture) {
+    //     console.log(match);
+    //     console.log(capture);
+    //     a = a.replace(new RegExp(capture, 'g'), "123");//这里也可以替换成需要的路径
+    // });
+    let i = 1;
+    a.replace(/<img(.*?)>/gi,function(match,capture){
+        // console.log(match)
+        console.log(capture)
+        a = a.replace(capture,' preview="1" data-pswp-uid="图片'+ i +'" '+capture);
+        i++;
+    })
+
+    console.log(a);
+</script>
+</html>
