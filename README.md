@@ -14,4 +14,8 @@ That branch is a bit too big, first create a separate repository, split a separa
 
 [daily records about life](./life)
 
+### :pig: :pig: :pig: [阅读](./read)
+
+[daily life about read](./read)
+
 ![img](./imgs/daily_01.jpg)
