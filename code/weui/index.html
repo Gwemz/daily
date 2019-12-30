@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>weui</title>
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.1/weui.min.css">
+    <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
+</head>
+
+<body>
+    <!-- <div class="weui-slider-box">
+        <div id="slider" class="weui-slider">
+            <div class="weui-slider__inner">
+                <div class="weui-slider__track"></div>
+                <div class="weui-slider__handler"></div>
+            </div>
+        </div>
+        <div id="sliderValue" class="weui-slider-box__value"></div>
+    </div> -->
+    <!-- <div class="weui-search-bar" id="searchBar">
+        <form class="weui-search-bar__form">
+            <div class="weui-search-bar__box">
+                <i class="weui-icon-search"></i>
+                <input type="search" class="weui-search-bar__input" placeholder="搜索" required="">
+                <a href="javascript:" class="weui-icon-clear"></a>
+            </div>
+            <label class="weui-search-bar__label">
+                <i class="weui-icon-search"></i>
+                <span>搜索</span>
+            </label>
+        </form>
+        <a href="javascript:" class="weui-search-bar__cancel-btn">取消</a>
+    </div> -->
+
+    <!-- <div class="weui-slider-box">
+        <div id="slider" class="weui-slider">
+            <div class="weui-slider__inner">
+                <div class="weui-slider__track"></div>
+                <div class="weui-slider__handler"></div>
+            </div>
+        </div>
+        <div id="sliderValue" class="weui-slider-box__value"></div>
+    </div> -->
+
+    <!-- <div class="weui-tab" id="tab">
+        <div class="weui-navbar">
+            <div class="weui-navbar__item">反馈</div>
+            <div class="weui-navbar__item">表单</div>
+            <div class="weui-navbar__item">上传</div>
+            <div class="weui-navbar__item">其它</div>
+        </div>
+        <div class="weui-tab__panel">
+            <div class="weui-tab__content">反馈页</div>
+            <div class="weui-tab__content">表单页</div>
+            <div class="weui-tab__content">上传页</div>
+            <div class="weui-tab__content">其它页</div>
+        </div>
+    </div> -->
+
+
+</body>
+<script type="text/javascript">
+    // weui.alert('weui');
+    // weui.dialog({
+    //     title: 'dialog标题',
+    //     content: 'dialog内容',
+    //     className: 'custom-classname',
+    //     buttons: [{
+    //         label: '取消',
+    //         type: 'default',
+    //         onClick: function () {
+    //             // alert('cancel')
+    //             console.log('cancel');
+    //         }
+    //     }, {
+    //         label: '确定',
+    //         type: 'primary',
+    //         onClick: function () { 
+    //             // alert('confirm') 
+    //             console.log('confirm');
+    //         }
+    //     }]
+    // });
+
+    // var loading = weui.loading('加载中...', {
+    //     className: 'custom-classname'
+    // });
+    // setTimeout(function () {
+    //     loading.hide(function () {
+    //         console.log('`loading` has been hidden');
+    //     });
+    // }, 3000);
+    // let url = 'http://wx.qlogo.cn/mmopen/DjlY6xR7CMsjvTgPn73HyIPQKzTxucFnJnVU9pStfLwX02ia5yNMpwuKZGrD5vbcf0MJKicibW71mrkHthx89h5xafXSZBwFrDy/132';    
+    // var gallery = weui.gallery(url, {
+    //     className: 'custom-classname',
+    //     onDelete: function () {
+    //         if (confirm('确定删除该图片？')) { console.log('删除'); }
+    //         gallery.hide(function () {
+    //             console.log('`gallery` has been hidden');
+    //         });
+    //     }
+    // });
+
+    // 示例2：
+    // weui.datePicker({
+    //     start: new Date(), // 从今天开始
+    //     end: 2030,
+    //     defaultValue: [2020, 6, 9],
+    //     onChange: function (result) {
+    //         console.log(result);
+    //     },
+    //     onConfirm: function (result) {
+    //         console.log(result);
+    //     },
+    //     id: 'datePicker'
+    // });
+
+    // weui.slider('#slider', {
+    //     step: 10,
+    //     defaultValue: 40,
+    //     onChange: function (percent) {
+    //         console.log(percent);
+    //     }
+    // });
+
+    // actionSheet
+    // weui.actionSheet([
+    //     {
+    //         label: '拍照',
+    //         onClick: function () {
+    //             console.log('拍照');
+    //         }
+    //     }, {
+    //         label: '从相册选择',
+    //         onClick: function () {
+    //             console.log('从相册选择');
+    //         }
+    //     }, {
+    //         label: '其他',
+    //         onClick: function () {
+    //             console.log('其他');
+    //         }
+    //     }
+    // ], [
+    //     {
+    //         label: '取消',
+    //         onClick: function () {
+    //             console.log('取消');
+    //         }
+    //     }
+    // ], {
+    //     className: 'custom-classname',
+    //     onClose: function () {
+    //         console.log('关闭');
+    //     }
+    // });
+
+    // alert
+    // weui.alert('这是一个弹窗');
+    // weui.alert('带回调的alert', function(){ console.log('ok') });
+    // var alertDom = weui.alert('手动关闭的alert', function () {
+    //     return false; // 不关闭弹窗，可用alertDom.hide()来手动关闭
+    // });
+    // weui.alert('自定义标题的alert',function(){
+    //     console.log('确定回调');
+    // }, { title: '提示' });
+
+    // weui.alert('自定义按钮的alert', {
+    //     title: '自定义按钮的alert',
+    //     buttons: [{
+    //         label: 'OK',
+    //         type: 'primary',
+    //         onClick: function () { console.log('ok') }
+    //     }]
+    // });
+
+    // weui.confirm('带回调的自定义标题的confirm', function () { console.log('yes') }, function () { console.log('no') }, {
+    //     title: '自定义标题'
+    // });
+
+    // weui.confirm('自定义按钮的confirm', {
+    //     title: '自定义按钮的confirm',
+    //     buttons: [{
+    //         label: '取消',
+    //         type: 'default',
+    //         onClick: function () { console.log('no') }
+    //     }, {
+    //         label: '确定',
+    //         type: 'primary',
+    //         onClick: function () { console.log('yes') }
+    //     }]
+    // });
+
+    // dialog
+    // weui.dialog({
+    //     title: 'dialog标题',
+    //     content: 'dialog内容',
+    //     className: 'custom-classname',
+    //     buttons: [{
+    //         label: '取消',
+    //         type: 'default',
+    //         onClick: function () { alert('取消') }
+    //     }, {
+    //         label: '确定',
+    //         type: 'primary',
+    //         onClick: function () { alert('确定') }
+    //     }]
+    // });
+
+    // loading
+    // var loading = weui.loading('加载中...', {
+    //     className: 'custom-classname'
+    // });
+    // setTimeout(function () {
+    // loading.hide(function () {
+    //     console.log('`loading` has been hidden');
+    // });
+    // }, 3000);
+
+    // picker
+    // weui.picker([
+    //     {
+    //         label: '飞机票',
+    //         value: 0,
+    //         disabled: true // 不可用
+    //     },
+    //     {
+    //         label: '火车票',
+    //         value: 1
+    //     },
+    //     {
+    //         label: '汽车票',
+    //         value: 3
+    //     },
+    //     {
+    //         label: '公车票',
+    //         value: 4,
+    //     }
+    // ], {
+    //     className: 'custom-classname',
+    //     container: 'body',
+    //     defaultValue: [3],
+    //     onChange: function (result) {
+    //         console.log(result)
+    //     },
+    //     onConfirm: function (result) {
+    //         console.log(result)
+    //     },
+    //     id: 'singleLinePicker'
+    // });
+
+    // weui.picker([
+    //     {
+    //         label: '1',
+    //         value: '1'
+    //     }, {
+    //         label: '2',
+    //         value: '2'
+    //     }, {
+    //         label: '3',
+    //         value: '3'
+    //     }
+    // ], [
+    //     {
+    //         label: 'A',
+    //         value: 'A'
+    //     }, {
+    //         label: 'B',
+    //         value: 'B'
+    //     }, {
+    //         label: 'C',
+    //         value: 'C'
+    //     }
+    // ], {
+    //     defaultValue: ['3', 'A'],
+    //     onChange: function (result) {
+    //         console.log(result);
+    //     },
+    //     onConfirm: function (result) {
+    //         console.log(result);
+    //     },
+    //     id: 'multiPickerBtn'
+    // });
+
+    // weui.picker([
+    //     {
+    //         label: '飞机票',
+    //         value: 0,
+    //         children: [
+    //             {
+    //                 label: '经济舱',
+    //                 value: 1
+    //             },
+    //             {
+    //                 label: '商务舱',
+    //                 value: 2
+    //             }
+    //         ]
+    //     },
+    //     {
+    //         label: '火车票',
+    //         value: 1,
+    //         children: [
+    //             {
+    //                 label: '卧铺',
+    //                 value: 1,
+    //                 disabled: true // 不可用
+    //             },
+    //             {
+    //                 label: '坐票',
+    //                 value: 2
+    //             },
+    //             {
+    //                 label: '站票',
+    //                 value: 3
+    //             }
+    //         ]
+    //     },
+    //     {
+    //         label: '汽车票',
+    //         value: 3,
+    //         children: [
+    //             {
+    //                 label: '快班',
+    //                 value: 1
+    //             },
+    //             {
+    //                 label: '普通',
+    //                 value: 2
+    //             }
+    //         ]
+    //     }
+    // ], {
+    //     className: 'custom-classname',
+    //     container: 'body',
+    //     defaultValue: [1, 3],
+    //     onChange: function (result) {
+    //         console.log(result)
+    //     },
+    //     onConfirm: function (result) {
+    //         console.log(result)
+    //     },
+    //     id: 'doubleLinePicker'
+    // });
+
+    // 时间选择器
+    // weui.datePicker({
+    //     start: new Date(), // 从今天开始
+    //     end: 2030,
+    //     cron: '* * 0,6',  // 每逢周日、周六
+    //     onChange: function (result) {
+    //         console.log(result);
+    //     },
+    //     onConfirm: function (result) {
+    //         console.log(result);
+    //     },
+    //     id: 'datePicker'
+    // });
+
+    // 搜索
+    // weui.searchBar('#searchBar');
+
+    // 滑动
+    // weui.slider('#slider', {
+    //     step: 10,
+    //     defaultValue: 40,
+    //     onChange: function (percent) {
+    //         console.log(percent);
+    //     }
+    // });
+
+    // weui.tab('#tab', {
+    //     defaultIndex: 0,
+    //     onChange: function (index) {
+    //         console.log(index);
+    //     }
+    // });
+
+    // weui.toast('操作成功', 3000);
+    // weui.toast('操作成功', {
+    //     duration: 3000,
+    //     className: 'custom-classname',
+    //     callback: function () { console.log('close') }
+    // });
+
+    // weui.topTips('请填写正确的字段');
+    // weui.topTips('请填写正确的字段', 3000);
+    // weui.topTips('请填写正确的字段', function () { console.log('close') });
+    // weui.topTips('请填写正确的字段', {
+    //     duration: 3000,
+    //     className: 'custom-classname',
+    //     callback: function () { console.log('close') }
+    // });
+
+    // 主动关闭
+    // var $topTips = weui.topTips('请填写正确的字段');
+    // $topTips.hide(function () {
+    //     console.log('`topTips` has been hidden');
+    // });
+
+    
+
+</script>
+
+</html>
