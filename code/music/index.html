@@ -41,7 +41,7 @@
                 <section>
                     <p>
                         {{infos.fan}}的《{{infos.fsn}}》是TA在网易云音乐听的第一首歌
-                        一转眼都{{turnTime(infos.rt,'YYYY-MM-DD')}}天了！
+                        一转眼都{{getSubDay(infos.rt)}}天了！
                     </p>
                     <p>
                         <h2 class="title">今年TA在网易云音乐的{{turnHour(infos.sth)}}小时里</h2>
@@ -58,7 +58,7 @@
                     <p>
                         <h2 class="title">这一年里，TA的听歌风格多元</h2>
                         <span v-for="item in infos.stl">
-                            {{item.tn}} {{item.tv}}<br>
+                            {{item.tn}}：{{item.tv}}首<br>
                         </span>
                     </p>
                     <p>
@@ -80,7 +80,7 @@
                         </template>
                     </p>
                     <p>
-                        <h2 class="title">创作于{{turnTime(infos.ost),'YYYY'}}年的</h2>
+                        <h2 class="title">创作于{{turnTime(infos.ost,'YYYY')}}年的</h2>
                         《{{infos.osn}}》是TA今年听过年代最久远的歌曲<br>
                         偶尔的怀旧<br>
                         往往会带来不一样的新鲜感呢
@@ -102,7 +102,7 @@
                         <h2 class="title">这一年TA一共发表了{{infos.cc}}条评论</h2>
                         收获了{{infos.lc}}个赞，上过{{infos.hcc}}次精彩评论<br>
                         TA在《{{infos.lsn}}》下面的评论，一共获得了{{infos.slc}}个赞:<br>
-                        {{infos.cmt}}<br>
+                        “{{infos.cmt}}”<br>
                         TA的话，引起了许多人的共鸣
                     </p>
                     <p>
@@ -114,7 +114,7 @@
                     <p>
                         <h2 class="title">今年TA的主页被访问了{{infos.uvc}}次</h2>
                         {{infos.uun}}是TA第一个关注的人<br>
-                        从关注到现在已经{{turnTime(infos.uft,'YYYY-MM-DD')}}天了<br>
+                        从关注到现在已经{{getSubDay(infos.uft)}}天了<br>
                         有{{infos.ufc}}个朋友正在默默关注TA<br>
                         新一年<br>
                         多来云村和朋友们打个招呼吧

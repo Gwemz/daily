@@ -27,14 +27,23 @@ new Vue({
             }
         },
         // 秒转小时
-        turnHour(){
-            return function(val){
-                return Math.round(val/3600);
+        turnHour() {
+            return function (val) {
+                return Math.round(val / 3600);
             }
         },
-        turnMinutes(){
+        // 秒转分钟
+        turnMinutes() {
+            return function (val) {
+                return Math.round(val / 60);
+            }
+        },
+        // 距离当前天数
+        getSubDay(){
             return function(val){
-                return Math.round(val/60);
+                let time = moment.unix(val)._i;
+                let day = this.getDayDiff(time);
+                return day;
             }
         }
     },
@@ -45,6 +54,13 @@ new Vue({
                 this.infos = res;
                 // console.log(res);
             })
+        },
+        getDayDiff(timesData) {
+            var dateBegin = new Date(timesData);
+            var dateEnd = new Date();//获取当前时间
+            var dateDiff = dateEnd.getTime() - dateBegin.getTime();//时间差的毫秒数
+            var dayDiff = Math.floor(dateDiff / (24 * 3600 * 1000));//计算出相差天数
+            return dayDiff;
         }
 
     }
