@@ -11,13 +11,30 @@ new Vue({
     },
     computed: {
         turnTime() {
-            return function (val, format) {
-                // let time = this.forTime(val, format);
-                // let time = this.getLocalTime(val);
-                // return time;
-                let time = moment(val).format(format);
-                console.log(time);
-                return time;
+            return function (val, formater) {
+                /*
+                    时间戳（秒）转日期格式    L  LL
+                    YYYY-MM-DD HH:mm:ss     2018-09-18 12:06:09
+                    L    2018-07-04
+                    LL   2018年7月4日
+                    LLL  2018年7月4日晚上5点55分
+                    LLLL 2018年7月4日星期三晚上5点55分
+                    x    转换当前时间的Unix时间戳
+                    d    今天是周几
+                */
+                let date = moment.unix(val).format(formater);
+                return date;
+            }
+        },
+        // 秒转小时
+        turnHour(){
+            return function(val){
+                return Math.round(val/3600);
+            }
+        },
+        turnMinutes(){
+            return function(val){
+                return Math.round(val/60);
             }
         }
     },
@@ -26,31 +43,8 @@ new Vue({
             axios.get('./info.json').then((data) => {
                 let res = data.data.data;
                 this.infos = res;
-                console.log(res);
+                // console.log(res);
             })
-        },
-        forTime(formater, t) {
-            let date = t ? new Date(t) : '';
-            if (date) {
-                let Y = date.getFullYear() + '',
-                    M = date.getMonth() + 1,
-                    D = date.getDate(),
-                    H = date.getHours(),
-                    m = date.getMinutes(),
-                    s = date.getSeconds();
-                return formater.replace(/YYYY|yyyy/g, Y)
-                    .replace(/YY|yy/g, Y.substr(2, 2))
-                    .replace(/MM/g, (M < 10 ? '0' : '') + M)
-                    .replace(/DD/g, (D < 10 ? '0' : '') + D)
-                    .replace(/HH|hh/g, (H < 10 ? '0' : '') + H)
-                    .replace(/mm/g, (m < 10 ? '0' : '') + m)
-                    .replace(/ss/g, (s < 10 ? '0' : '') + s)
-            } else {
-                return '';
-            }
-        },
-        getLocalTime(nS) {
-            return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
         }
 
     }

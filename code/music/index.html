@@ -31,7 +31,7 @@
                             <h4 class="weui-media-box__title">嗨“{{infos.nkn}}”，你好！
                             </h4>
                             <p class="weui-media-box__desc">
-                                {{infos.rt}} 是TA和网易云音乐第一次相遇!
+                                {{turnTime(infos.rt,'YYYY-MM-DD')}} 是TA和网易云音乐第一次相遇!
                             </p>
                         </div>
                     </a>
@@ -41,10 +41,10 @@
                 <section>
                     <p>
                         {{infos.fan}}的《{{infos.fsn}}》是TA在网易云音乐听的第一首歌
-                        一转眼都{{infos.rt}}天了！
+                        一转眼都{{turnTime(infos.rt,'YYYY-MM-DD')}}天了！
                     </p>
                     <p>
-                        <h2 class="title">今年TA在网易云音乐的{{infos.sth}}小时里</h2>
+                        <h2 class="title">今年TA在网易云音乐的{{turnHour(infos.sth)}}小时里</h2>
                         一共听了{{infos.stc}}首歌<br>
                         相信有音乐的日子,每一天都充满了力量
                     </p>
@@ -62,12 +62,12 @@
                         </span>
                     </p>
                     <p>
-                        <h2 class="title">{{infos.rst}}也许是很特别的一天</h2>
+                        <h2 class="title">{{turnTime(infos.rst,'MM月DD日')}}也许是很特别的一天</h2>
                         TA把{{infos.ran}}的《{{infos.rsn}}》反复听了{{infos.rsc}}遍<br>
                         这首歌和TA有着怎样的故事呢？
                     </p>
                     <p>
-                        <h2 class="title">{{infos.mst}}夜深了</h2>
+                        <h2 class="title">{{turnTime(infos.mst,'MM月DD日 HH点mm分')}}夜深了</h2>
                         TA还在听着{{infos.man}}的 《{{infos.msn}}》<br>
                         无论多晚，网易云音乐都在
                     </p>
@@ -80,7 +80,7 @@
                         </template>
                     </p>
                     <p>
-                        <h2 class="title">创作于{{infos.ost}}年的</h2>
+                        <h2 class="title">创作于{{turnTime(infos.ost),'YYYY'}}年的</h2>
                         《{{infos.osn}}》是TA今年听过年代最久远的歌曲<br>
                         偶尔的怀旧<br>
                         往往会带来不一样的新鲜感呢
@@ -92,9 +92,9 @@
                         TA又是怎么发现它的？
                     </p>
                     <p>
-                        <h2 class="title">这一年电台陪TA度过了{{infos.mitc}}个小时</h2>
+                        <h2 class="title">这一年电台陪TA度过了{{turnHour(infos.mitc)}}个小时</h2>
                         《{{infos.frn}}》是TA最爱的节目<br>
-                        一共听了{{infos.frth}}分钟<br>
+                        一共听了{{turnMinutes(infos.frsh)}}分钟<br>
                         许多声音从陌生到熟悉<br>
                         也会更加熟悉
                     </p>
@@ -114,7 +114,7 @@
                     <p>
                         <h2 class="title">今年TA的主页被访问了{{infos.uvc}}次</h2>
                         {{infos.uun}}是TA第一个关注的人<br>
-                        从关注到现在已经{{infos.uft}}天了<br>
+                        从关注到现在已经{{turnTime(infos.uft,'YYYY-MM-DD')}}天了<br>
                         有{{infos.ufc}}个朋友正在默默关注TA<br>
                         新一年<br>
                         多来云村和朋友们打个招呼吧
