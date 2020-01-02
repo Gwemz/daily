@@ -39,8 +39,8 @@ new Vue({
             }
         },
         // 距离当前天数
-        getSubDay(){
-            return function(val){
+        getSubDay() {
+            return function (val) {
                 let time = moment.unix(val)._i;
                 let day = this.getDayDiff(time);
                 return day;
@@ -61,6 +61,67 @@ new Vue({
             var dateDiff = dateEnd.getTime() - dateBegin.getTime();//时间差的毫秒数
             var dayDiff = Math.floor(dateDiff / (24 * 3600 * 1000));//计算出相差天数
             return dayDiff;
+        },
+        // 
+        itemClick(singer, song) {
+            console.log(singer, song);
+            weui.dialog({
+                title: singer,
+                content: '《' + song + '》',
+                className: 'custom-classname',
+                buttons: [{
+                    label: '取消',
+                    type: 'default',
+                    onClick: function () {
+
+                    }
+                }, {
+                    label: '确定',
+                    type: 'primary',
+                    onClick: function () {
+
+                    }
+                }]
+            });
+        },
+        showAction(name, time, desc) {
+            weui.actionSheet([
+                {
+                    label: name,
+                    onClick: function () {
+                        console.log(name);
+                    }
+                }, {
+                    label: time,
+                    onClick: function () {
+                        console.log(time);
+                    }
+                }, {
+                    label: desc,
+                    onClick: function () {
+                        console.log(desc);
+                    }
+                }
+            ], [
+                {
+                    label: '取消',
+                    onClick: function () {
+                        console.log('取消');
+                    }
+                }
+            ], {
+                title: '',
+                className: "custom-classname",
+                onClose: function () {
+                    console.log('关闭');
+                }
+            });
+        },
+        goLoad() {
+            let loading = weui.loading('loading');
+            setTimeout(function () {
+                loading.hide();
+            }, 3000);
         }
 
     }

@@ -21,9 +21,8 @@
 
         <div class="page__bd">
             <div class="weui-panel weui-panel_access" :data-id="infos.ouid">
-                <!-- <div class="weui-panel__hd">嗨“{{infos.nkn}}”，你好！</div> -->
                 <div class="weui-panel__bd">
-                    <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                    <a @click="showAction(infos.nkn,turnTime(infos.rt,'YYYY-MM-DD'),'TA和网易云音乐第一次相遇')" class="weui-media-box weui-media-box_appmsg">
                         <div class="weui-media-box__hd">
                             <img class="weui-media-box__thumb" :src="infos.aul" alt="loading">
                         </div>
@@ -44,35 +43,36 @@
                         一转眼都{{getSubDay(infos.rt)}}天了！
                     </p>
                     <p>
-                        <h2 class="title">今年TA在网易云音乐的{{turnHour(infos.sth)}}小时里</h2>
+                        <h3 class="title"><i class="weui-icon-success"></i>今年TA在网易云音乐的{{turnHour(infos.sth)}}小时里</h3>
                         一共听了{{infos.stc}}首歌<br>
                         相信有音乐的日子,每一天都充满了力量
                     </p>
                     <p>
-                        <h2 class="title">这一年里TA常在“{{infos.tod}}”听歌</h2>
+                        <h3 class="title"><i class="weui-icon-info"></i>这一年里TA常在“{{infos.tod}}”听歌</h3>
                         听歌时<br>
                         TA喜欢在评论区寻找聊得来的伙伴<br>
                         TA热衷分享快乐<br>
                         一共分享了{{infos.ysc}}首好歌给TA的好朋友
                     </p>
                     <p>
-                        <h2 class="title">这一年里，TA的听歌风格多元</h2>
+                        <h3 class="title"><i class="weui-icon-warn"></i>这一年里，TA的听歌风格多元</h3>
                         <span v-for="item in infos.stl">
                             {{item.tn}}：{{item.tv}}首<br>
                         </span>
                     </p>
                     <p>
-                        <h2 class="title">{{turnTime(infos.rst,'MM月DD日')}}也许是很特别的一天</h2>
+                        <h3 class="title"><i class="weui-icon-success"></i>{{turnTime(infos.rst,'MM月DD日')}}也许是很特别的一天</h3>
                         TA把{{infos.ran}}的《{{infos.rsn}}》反复听了{{infos.rsc}}遍<br>
                         这首歌和TA有着怎样的故事呢？
                     </p>
                     <p>
-                        <h2 class="title">{{turnTime(infos.mst,'MM月DD日 HH点mm分')}}夜深了</h2>
+                        <h3 class="title"><i class="weui-icon-waiting"></i>{{turnTime(infos.mst,'MM月DD日 HH点mm分')}}夜深了
+                        </h3>
                         TA还在听着{{infos.man}}的 《{{infos.msn}}》<br>
                         无论多晚，网易云音乐都在
                     </p>
                     <p>
-                        <h2 class="title">{{infos.yan}}是TA今年最喜爱的歌手</h2>
+                        <h3 class="title"><i class="weui-icon-warn"></i>{{infos.yan}}是TA今年最喜爱的歌手</h3>
                         <img :src="infos.yap" alt="">
                         {{infos.yan}}的歌一共听了{{infos.ypc}}次<br>
                         <template v-for="(item,idx) in infos.yal">
@@ -80,39 +80,40 @@
                         </template>
                     </p>
                     <p>
-                        <h2 class="title">创作于{{turnTime(infos.ost,'YYYY')}}年的</h2>
+                        <h3 class="title"><i class="weui-icon-success"></i>创作于{{turnTime(infos.ost,'YYYY')}}年的
+                        </h3>
                         《{{infos.osn}}》是TA今年听过年代最久远的歌曲<br>
                         偶尔的怀旧<br>
                         往往会带来不一样的新鲜感呢
                     </p>
                     <p>
-                        <h2 class="title">{{infos.mian}}的</h2>
+                        <h3 class="title"><i class="weui-icon-info"></i>{{infos.mian}}的</h3>
                         《{{infos.misn}}》是TA本年度最小众的珍藏<br>
                         这首歌听过的人不多<br>
                         TA又是怎么发现它的？
                     </p>
                     <p>
-                        <h2 class="title">这一年电台陪TA度过了{{turnHour(infos.mitc)}}个小时</h2>
+                        <h3 class="title"><i class="weui-icon-warn"></i>这一年电台陪TA度过了{{turnHour(infos.mitc)}}个小时</h3>
                         《{{infos.frn}}》是TA最爱的节目<br>
                         一共听了{{turnMinutes(infos.frsh)}}分钟<br>
                         许多声音从陌生到熟悉<br>
                         也会更加熟悉
                     </p>
                     <p>
-                        <h2 class="title">这一年TA一共发表了{{infos.cc}}条评论</h2>
+                        <h3 class="title"><i class="weui-icon-success"></i>这一年TA一共发表了{{infos.cc}}条评论</h3>
                         收获了{{infos.lc}}个赞，上过{{infos.hcc}}次精彩评论<br>
                         TA在《{{infos.lsn}}》下面的评论，一共获得了{{infos.slc}}个赞:<br>
                         “{{infos.cmt}}”<br>
                         TA的话，引起了许多人的共鸣
                     </p>
                     <p>
-                        <h2 class="title">这一年TA一共创作了{{infos.plc}}个歌单</h2>
+                        <h3 class="title"><i class="weui-icon-info"></i>这一年TA一共创作了{{infos.plc}}个歌单</h3>
                         被播放了{{infos.plpc}}次<br>
                         获得了{{infos.plbc}}次收藏<br>
                         TA的音乐品味可真棒～
                     </p>
                     <p>
-                        <h2 class="title">今年TA的主页被访问了{{infos.uvc}}次</h2>
+                        <h3 class="title"><i class="weui-icon-warn"></i>今年TA的主页被访问了{{infos.uvc}}次</h3>
                         {{infos.uun}}是TA第一个关注的人<br>
                         从关注到现在已经{{getSubDay(infos.uft)}}天了<br>
                         有{{infos.ufc}}个朋友正在默默关注TA<br>
@@ -120,14 +121,14 @@
                         多来云村和朋友们打个招呼吧
                     </p>
                     <p>
-                        <h2 class="title">TA最喜爱的音乐TOP10:</h2>
+                        <h3 class="title">TA最喜爱的音乐TOP10:</h3>
                         <!-- <p v-for="(item,idx) in infos.sil" :id="item.sid">
                             {{(idx+1)}}、{{item.an}}《{{item.sn}}》<br>
                             <img :src="item.ap" alt="">
                         </p> -->
                     </p>
                     <div class="weui-panel__bd">
-                        <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg"
+                        <a @click="itemClick(item.an,item.sn)" class="weui-media-box weui-media-box_appmsg"
                             v-for="(item,idx) in infos.sil" :id="item.sid">
                             <div class="weui-media-box__hd">
                                 <img class="weui-media-box__thumb" :src="item.ap" alt="">
@@ -138,11 +139,18 @@
                             </div>
                         </a>
                     </div>
-                    <p>
+                    <p @click="goLoad">
                         2019结束了，你我的故事仍将继续！
                     </p>
                 </section>
             </article>
+            <div class="weui-footer">
+                <p class="weui-footer__links">
+                    <a href="https://www.wdcorner.cn" class="weui-footer__link">wdcorner的主页</a>
+                    <a href="https://blog.gwem.top" class="weui-footer__link">winter的博客</a>
+                </p>
+                <p class="weui-footer__text">Copyright &copy; 2019-2020 gwemz</p>
+            </div>
         </div>
     </div>
 </body>
